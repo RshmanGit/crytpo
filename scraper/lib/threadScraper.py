@@ -68,11 +68,6 @@ def scrapePage(link, head, posts):
             print(x)
             x = x + 1
             print(info)
-          
-      	  print("Extracted")
-	  print(HPString[5])
-	  print(HPString[8])
-	  print(HPString[17:])
 
           print("------------------------")
           
