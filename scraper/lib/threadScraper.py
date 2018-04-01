@@ -73,7 +73,8 @@ def scrapePage(link, head, posts):
           print("Extracted") #this
           print(HPstrings[5]) #this
           date = HPstrings[8].split(',')
-          print(date[0]+" "+date[1]+" "+date[2]) #this
+          day = date[0].split()
+          print(day[0]+ " "+ day[1] + " " +date[1]) #this
           print(HPstrings[17:]) #and this shit too
           #just fucking do it
 
