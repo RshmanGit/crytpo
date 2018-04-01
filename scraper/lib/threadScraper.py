@@ -72,7 +72,8 @@ def scrapePage(link, head, posts):
           #fucking commit already
           print("Extracted") #this
           print(HPstrings[5]) #this
-          print(HPstrings[8]) #this
+          date = HPstrings[8].split(',')
+          print(date[0]+" "+date[1]+" "+date[2]) #this
           print(HPstrings[17:]) #and this shit too
           #just fucking do it
 
