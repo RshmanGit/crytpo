@@ -43,6 +43,8 @@ def scrapePage(link, head, posts):
   form = soup.find_all("form",id = "quickModForm")[0]
   table = form.find_all("table")[0]
   
+x = 0
+
   for child in table.contents:
     try:
       temp = child
@@ -88,7 +90,9 @@ def scrapePage(link, head, posts):
           except Exception as e:
             print("[-]------------------")
 
-          pprint(post)   
+          pprint(post)
+          print(x)
+          x = x + 1   
           posts.insert_one(post)      
 
           print("------------------------")
