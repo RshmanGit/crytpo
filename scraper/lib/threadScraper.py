@@ -63,16 +63,31 @@ def scrapePage(link, head, posts):
             
           #fucking commit already
           print("Extracted")
-            
-          print(poster_infostrings[1])
-          print(poster_infostrings[7].split(":")[1])
-          print(poster_infostrings[8].split(":")[1])
+          
+          post = {}
 
-          print(HPstrings[5]) 
-          date = HPstrings[8].split(',')
-          day = date[0].split()
-          print(day[0]+ " "+ day[1] + " " +date[1]) 
-          print(HPstrings[17:])
+          try:
+            post['name'] = poster_infostrings[1]
+            post['activity'] = poster_infostrings[7].split(":")[1]
+            post['merit'] = poster_infostrings[8].split(":")[1] 
+          except Exception as e:
+            print('[-]-----------------')
+
+          try:
+            date = HPstrings[8].split(',')
+            day = date[0].split()
+            post['date'] = str(day[0]+ " "+ day[1] + " " +date[1])
+            strings = HPstrings[17:]
+
+            postdata = ""
+            for s in strings:
+              postdata += s
+
+            post['postdata'] = s
+          except Exception as e:
+            print("[-]------------------")
+
+          pprint(post)         
 
           print("------------------------")
           
