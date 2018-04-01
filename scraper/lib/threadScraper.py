@@ -38,6 +38,7 @@ def scrapePage(link, head, posts):
   con = ur.urlopen(req)
   page = con.read()
   soup = bs(page, "html.parser")
+  time.sleep(0.4)
   
   form = soup.find_all("form",id = "quickModForm")[0]
   table = form.find_all("table")[0]
@@ -87,7 +88,8 @@ def scrapePage(link, head, posts):
           except Exception as e:
             print("[-]------------------")
 
-          pprint(post)         
+          pprint(post)   
+          posts.insert_one(post)      
 
           print("------------------------")
           
