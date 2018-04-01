@@ -69,10 +69,12 @@ def scrapePage(link, head, posts):
             x = x + 1
             print(info)
 
-          print("Extracted")
-          print(HPstrings[5])
-          print(HPstrings[8])
-          print(HPstrings[17:])
+          #fucking commit already
+          print("Extracted") #this
+          print(HPstrings[5]) #this
+          print(HPstrings[8]) #this
+          print(HPstrings[17:]) #and this shit too
+          #just fucking do it
 
           print("------------------------")
           
