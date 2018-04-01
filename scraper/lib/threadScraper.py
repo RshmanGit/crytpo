@@ -77,7 +77,7 @@ def scrapePage(link, head, posts):
             date = HPstrings[8].split(',')
             day = date[0].split()
             post['date'] = str(day[0]+ " "+ day[1] + " " +date[1])
-            strings = HPstrings[17:]
+            strings = HPstrings[17:-1]
 
             postdata = ""
             for s in strings:
