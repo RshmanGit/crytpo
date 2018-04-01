@@ -61,22 +61,18 @@ def scrapePage(link, head, posts):
             x = x + 1
             print(info)
             
-          print("-------------------------")
-            
-          x = 0
-          for info in HPstrings:
-            print(x)
-            x = x + 1
-            print(info)
-
           #fucking commit already
-          print("Extracted") #this
-          print(HPstrings[5]) #this
+          print("Extracted")
+            
+          print(poster_infostrings[1])
+          print(poster_infostrings[7].split(":")[1])
+          print(poster_infostrings[8].split(":")[1])
+
+          print(HPstrings[5]) 
           date = HPstrings[8].split(',')
           day = date[0].split()
-          print(day[0]+ " "+ day[1] + " " +date[1]) #this
-          print(HPstrings[17:]) #and this shit too
-          #just fucking do it
+          print(day[0]+ " "+ day[1] + " " +date[1]) 
+          print(HPstrings[17:])
 
           print("------------------------")
           
