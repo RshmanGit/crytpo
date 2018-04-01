@@ -57,12 +57,6 @@ def scrapePage(link, head, posts):
           tds = results.find("table").find("tr").find_all("td")
           poster_infostrings = extractNavigableStrings(tds[0])
           HPstrings = extractNavigableStrings(tds[1])
-          
-          x = 0
-          for info in poster_infostrings:
-            print(x)
-            x = x + 1
-            print(info)
             
           #fucking commit already
           print("Extracted")
