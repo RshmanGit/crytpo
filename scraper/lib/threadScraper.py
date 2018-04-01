@@ -69,6 +69,11 @@ def scrapePage(link, head, posts):
             x = x + 1
             print(info)
 
+          print("Extracted")
+          print(HPstrings[5])
+          print(HPstrings[8])
+          print(HPstrings[17:])
+
           print("------------------------")
           
         except Exception as e:
