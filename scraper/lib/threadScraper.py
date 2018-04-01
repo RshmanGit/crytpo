@@ -157,10 +157,9 @@ def main():
     results = collection.find()
     posts = db.postData
   
-    #for result in results:
-    for i in range(0,4):
+    for result in results:
       try:
-        scrapeThread(results[i]['url'],headers,posts)
+        scrapeThread(result['url'],headers,posts)
       except Exception as e:
         pass
   
